@@ -21,6 +21,22 @@ This is the product detailed page after merging image handler, GPE, product tag 
 Please also look at the folder [images](https://github.com/pangqiao/zencart/tree/master/images)for the comparation.
 
 ## Code structure
-/var/www includes the source code for zencart.
-/etc/apache2 includes the configure file for apache, such as port 80.
-/db.sql is the database backup.
+/var/www: includes the source code for zencart.  
+/etc/apache2: includes the configure file for apache, such as port 80.  
+/db.sql: the database backup.  
+
+## Server requirements
+ubuntu14.04 + apache2 + php+mysql+phalcon
+```
+sudo apt-get update
+sudo apt-get install apache2
+
+sudo add-apt-repository ppa:eugenesan/ppa
+sudo apt-get install php5
+sudo apt-get install phpmyadmin 
+sudo ln -s /usr/share/phpmyadmin /var/www
+
+sudo apt-get install mysql-client-core-5.6
+sudo apt-get install mysql-client-5.6
+sudo apt-get install mysql-server-5.6
+```
