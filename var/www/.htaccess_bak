@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST}^47.95.215.83[NC]
+RewriteRule ^test/.html$ test.php

@@ -1,0 +1,16 @@
+#BackToTop {
+    background: url("../css/NewtoTop.jpg") no-repeat scroll left top rgba(0,0,0,0);
+    bottom: 30px;
+    cursor: pointer;
+    display: none;
+    font-size: 12px;
+    height: 90px;
+    left: 50%;
+    margin-left: 520px;
+    opacity: .8;
+    padding: 5px 0;
+    position: fixed;
+    text-align: center;
+    width: 20px;
+    z-index: 9999;
+}

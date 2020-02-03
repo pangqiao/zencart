@@ -1,0 +1,70 @@
+/**
+	Style Name: Goods pictures show enhanced ~ Stylesheet
+	DEMO URI: http://demo.zcmb.net/gpe/
+	Description: Goods pictures show enhanced  for Zen Cart 1.3x~1.5x, Powered by KIRA
+	Version: 1.0
+	Author: KIRA
+	Author URI: http://zcbk.org/
+	Tags: XHTML, CSS, Zen Cart, Templates, Skin, Zen Cart 中文博客, 火星花园, KIRA
+*/
+@charset "utf-8"; 
+/* CSS Document */
+.clear{clear: both; overflow: hidden; height: 0;}
+.leftDiv{float: left;}
+.rightDiv{float: right;}
+.imgBox{text-align: center;}
+/*Lightbox*/
+#jquery-overlay{position: absolute; top: 0; left: 0; z-index: 999990; width: 100%; height: 500px;}
+#jquery-lightbox{position: absolute; top: 0; left: 0; width: 100%; z-index: 999991; text-align: center; line-height: 0;}
+#jquery-lightbox a img{border: none;}
+#lightbox-container-image-box{position: relative; background-color: #fff; width: 250px; height: 250px; margin: -30px auto 0 auto;}
+#lightbox-container-image{padding: 10px;}
+#lightbox-loading{position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0;}
+#lightbox-nav{position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 999992;}
+#lightbox-container-image-box > #lightbox-nav{left: 0;}
+#lightbox-nav a{outline: none;}
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext{width: 49%; height: 100%; zoom: 1; display: block;}
+#lightbox-nav-btnPrev{left: 0; float: left;}
+#lightbox-nav-btnNext{right: 0; float: right;}
+#lightbox-container-image-data-box{font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100%; padding: 0 10px 0;}
+#lightbox-container-image-data{padding: 0 10px; color: #666;}
+#lightbox-container-image-data #lightbox-image-details{width: 70%; float: left; text-align: left;}
+#lightbox-image-details-caption{font-weight: bold;}
+#lightbox-image-details-currentNumber{clear: left; padding-bottom: 1.0em;}
+#lightbox-secNav-btnClose{width: 66px; float: right; padding-bottom: 0.7em;}
+/*Zoom*/
+.jqZoomTitle{z-index:5000; text-align:center; font-size:11px; font-family:Tahoma; height:16px; padding-top:2px; position:absolute; top: 0px; left: 0px; width: 100%; color: #FFF; background: #999;}
+.jqZoomPup{overflow:hidden; background-color: #FFF; -moz-opacity:0.6; opacity: 0.6; filter: alpha(opacity = 60); z-index:10; border-color:#c4c4c4; border-style: solid; cursor:crosshair;}
+.jqZoomPup img{border: 0px;}
+.preload{-moz-opacity:0.8; opacity: 0.8; filter: alpha(opacity = 80); color: #333; font-size: 12px; font-family: Tahoma; text-decoration: none; border: 1px solid #CCC; background-color: white; padding: 8px; text-align:center; background-image: url(../images/gpe/zoomloader.gif); background-repeat: no-repeat; background-position: 43px 30px; width:90px; * width:100px; height:43px; *height:55px; z-index:10; position:absolute; top:3px; left:3px;}
+.jqZoomWindow{border: 1px solid #999; background-color: #FFF;}
+/*Scroll*/
+#scrollImg img
+{
+	/* border:1px solid #C0C0C0; */
+	text-align: center; 
+	width: 66px; 
+	height: 66px; 
+	padding: 1px; 
+	margin: 0 7px;
+}
+
+#scrollImg img:hover{border:1px solid #6A6A6A;}
+.noButton{padding-left: 3px;}
+.noButton li{margin: 0 3px;}
+#mainImg{
+	text-align: center;
+	margin:0px 0px 11px 6px;
+}
+/*scroll level*/
+.scrollLevel #imgPrev,.scrollLevel #imgNext{width: 14px; height: 38px; padding: 0; margin: 10px 0 0 0; border: none; display: block;}
+.scrollLevel #imgPrev{background:url(../images/gpe/arrowLevel.png) no-repeat -14px 0px;}
+.scrollLevel #imgNext{background:url(../images/gpe/arrowLevel.png) no-repeat -42px 0px;}
+.scrollLevel #imgPrev:hover{background:url(../images/gpe/arrowLevel.png) no-repeat -28px 0px;}
+.scrollLevel #imgNext:hover{background:url(../images/gpe/arrowLevel.png) no-repeat 0px 0px;}
+/*scroll vertical*/
+.scrollVertical #imgPrev,.scrollVertical #imgNext{width: 38px; height: 14px; padding: 0; margin: 0 auto; border: none; display: block;}
+.scrollVertical #imgPrev{background:url(../images/gpe/arrowVertical.png) no-repeat 0px 0px; margin-bottom: 3px;}
+.scrollVertical #imgNext{background:url(../images/gpe/arrowVertical.png) no-repeat  0px -28px;}
+.scrollVertical #imgPrev:hover{background:url(../images/gpe/arrowVertical.png) no-repeat 0px -14px;}
+.scrollVertical #imgNext:hover{background:url(../images/gpe/arrowVertical.png) no-repeat 0px -42px;}

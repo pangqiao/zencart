@@ -1,0 +1,44 @@
+ /* @package FAQ Manager
+ * @copyright Copyright 2003-2009 Zen Cart Development Team
+ * @copyright Portions Copyright 2003 osCommerce
+ * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
+ * @Original contrib by Vijay Immanuel for osCommerce, converted to zen by dave@open-operations.com - http://www.open-operations.com
+ * @stylesheet_faq_manager.php created 2012-09-09 kamelion0927
+ */
+
+/*Featured FAQs*/ 
+ h2#featuredfaqHeading{}
+ #featuredFaqs{border: 1px solid #e3e3e3;background: #f3f3f3;padding: 10px;}
+
+/*FAQ Index*/
+ #faqSorter{margin: 5px 0 5px 0;}
+ LABEL#faqSort{float: left;line-height: 13px;padding: 3px 0 0 0;width: 40px;}
+ .faqSplitPageResultsWrapper{border-bottom: 1px solid #E3E3E3;border-top: 1px solid #E3E3E3;float: left;margin-bottom: 10px;padding: 10px 0;width: 100%;}
+ #allFaqsListingTopNumber{}
+ #allFaqsListingTopLinks{}
+ #allFaqsListingBottomNumber{}
+ #allFaqsListingBottomLinks{}
+ .faqSplitPagesResult{}
+ .faqSplitPagesLinks{} 
+ h3.faq_cat_title{}
+ .faqQuestion{}
+ .faqQuestion a:link, .faqQuestion a:visited, .faqQuestion a:active{}
+ .faqQuestion a:hover{}
+
+/*FAQ Info Page*/
+  .faqNextPrevWrapperTop{border-bottom: 1px solid #E3E3E3;padding: 0 0 5px 0;margin: 0 0 10px 0;}
+  .faqNextPrevWrapperBottom{border-bottom: 1px solid #E3E3E3;padding: 0 0 5px 0;margin: 10px 0 0 0;}
+  .faqnavNextPrevCounter{}
+  .faqnavNextPrevList{display: inline;white-space: nowrap;margin: 0;padding:  0.5em 0em;list-style-type: none;}
+  h1#faqInfoHeading{display: none;}
+  .faqQuestionHeader{font-size: 115%;font-weight: bold;}
+  h3.faqQuestion{font-weight: normal;}
+  .faqAnswerHeader{font-size: 115%;font-weight: bold;}
+  .faqAnswer{}
+  
+/*FAQ Categories Sidebox*/ 
+ h3.faqcategoriesHeading{}
+ #faqcategoriesContent{}
+ 
+ 
+ 

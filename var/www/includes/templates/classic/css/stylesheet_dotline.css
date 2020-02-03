@@ -1,0 +1,15 @@
+.vDotLine
+{
+    background-color: transparent;
+    background-image: url(../images/delim_v.gif);
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    width: 20px;
+    font-size: 1px;
+}
+
+.hDotLine
+{
+    background-image: url(../images/delim_v.gif);
+    padding:1px 0;
+}
