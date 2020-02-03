@@ -1,7 +1,7 @@
 # zencart
 Zen Cart® truly is the art of e-commerce; free, user-friendly, open source shopping cart software. The ecommerce web site design program is developed by a group of like-minded shop owners, programmers, designers, and consultants that think ecommerce web design could be, and should be, done differently.
-## the changes in the code
-Zen Cart® provides basic functionality, but the skin and the layout is not good looking, and need some important modules. Such as database backup, source code backup,SEO,image handlesr and so on. I use v1.15.1 is because there are more useful mature plugins. The fold [Plugins](https://github.com/pangqiao/zencart/tree/master/Plugins) contains the import plugins in the change, including:
+## The changes in the code
+Zen Cart® provides basic functionality, but the skin and the layout is not good looking, and need some important modules. Such as database backup, source code backup,SEO,image handlesr and so on. I use v1.5.1 is because there are more useful mature plugins. The folder [Plugins](https://github.com/pangqiao/zencart/tree/master/Plugins) contains the import plugins in the change, including:
 ```
 ultimate_seo_urls_212  
 Simple_Google_Analytics_6  
@@ -54,3 +54,41 @@ sudo apt-get install mysql-server-5.6
 	tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN  
 	tcp        0      0 172.17.171.41:41904     140.205.140.205:80      ESTABLISHED  
 4. Change directory to /var/www/ 
+
+## Move the station
+[WampServer](http://www.wampserver.com/) is a Windows web development environment. It allows you to create web applications with Apache2, PHP and a MySQL database. Alongside, PhpMyAdmin allows you to manage easily your database.But you want your web get viewed by others, your should move it to the server and open the port 80. I use ECS of aliyun.  
+This is the steps：  
+1. Prepare the environment as before, linux, apach2, PHP, etc.  
+2. Install the same zencart software V1.5.1. with the same username and password as WampServer. 
+3. Backup /includes/configure.php and /admin/includes/configure.php on the server.
+4. Overwrite all the files on the server with local code.
+5. Restore /includes/configure.php and /admin/includes/configure.php on the server.
+6. Log on the phpMyAdmin and clean the database, use new datebase [db.sql](https://github.com/pangqiao/zencart/tree/master/db.sql)
+7. If you got error like 404, please check /var/www/.htaccess.
+8. Set the configure.php as read only.
+
+## The password of Admin
+1. change the file admin/login.php
+```
+define('ADMIN_PASSWORD_EXPIRES_INTERVAL', strtotime('- 90 day'));
+```
+or change the file admin/login.php, $message to true. 
+```
+ if ($message == false) {
+	$_SESSION['admin_id'] = $result->fields['admin_id'];
+	if (SESSION_RECREATE == ‘True’) {
+		zen_session_recreate();
+	}
+	zen_redirect(zen_href_link(FILENAME_DEFAULT, ”, ‘SSL’));
+}
+```
+2. Enter into phpmyadmin, open database of admin, In SQL mode:
+```
+DELETE FROM admin WHERE admin_name = 'Admin'; 
+INSERT INTO admin (admin_name, admin_email, admin_pass, admin_profile) 
+VALUES ('Admin', 'admin@localhost', '351683ea4e19efe34874b501fdbf9792:9b', 1);
+```
+after reset, the pass word is "admin"
+
+## TODO
+ 
