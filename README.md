@@ -18,7 +18,7 @@ All the plugins are fully debugged. There are the plugins in Admin:
 This is the product detailed page after merging image handler, GPE, product tag etc.
 ![detailed page](https://github.com/pangqiao/zencart/blob/master/images/productdetail2.jpg)
 
-Please also look at the folder [images](https://github.com/pangqiao/zencart/tree/master/images)for the comparation.
+Please also look at the folder [images](https://github.com/pangqiao/zencart/tree/master/images) to see the difference.
 
 ## Code structure
 /var/www: includes the source code for zencart.  
@@ -26,7 +26,7 @@ Please also look at the folder [images](https://github.com/pangqiao/zencart/tree
 /db.sql: the database backup.  
 
 ## Server requirements
-ubuntu14.04 + apache2 + php+mysql+phalcon
+ubuntu14.04 + apache2 + php+mysql + phalcon
 ```
 sudo apt-get update
 sudo apt-get install apache2
