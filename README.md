@@ -15,8 +15,12 @@ sitemapXML(v1.3.8-v1.5.1)
 All the plugins are fully debugged. There are the plugins in Admin:
 ![admin](https://github.com/pangqiao/zencart/blob/master/images/Admin.jpg)
 
-This the product detailed page after merging image handler, GPE, product tag etc.
+This is the product detailed page after merging image handler, GPE, product tag etc.
 ![detailed page](https://github.com/pangqiao/zencart/blob/master/images/productdetail2.jpg)
 
-Please also look at the folder [iamges](https://github.com/pangqiao/zencart/tree/master/images)for the comparison.
+Please also look at the folder [images](https://github.com/pangqiao/zencart/tree/master/images)for the comparation.
 
+## Code structure
+/var/www includes the source code for zencart.
+/etc/apache2 includes the configure file for apache, such as port 80.
+/db.sql is the database backup.
