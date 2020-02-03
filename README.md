@@ -27,7 +27,7 @@ Please also look at the folder [images](https://github.com/pangqiao/zencart/tree
 /db.sql: the database backup.  
 
 ## Server requirements
-ubuntu14.04 + apache2 + php+mysql
+ubuntu14.04 + apache2 + php + mysql
 ```
 sudo apt-get update
 sudo apt-get install apache2
@@ -73,7 +73,7 @@ This is the steps:
 ```
 define('ADMIN_PASSWORD_EXPIRES_INTERVAL', strtotime('- 90 day'));
 ```
-or change the file admin/login.php, $message to true, you can use any password. 
+or change $message to true, you can use any password. 
 ```
  if ($message == false) {
 	$_SESSION['admin_id'] = $result->fields['admin_id'];
