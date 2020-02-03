@@ -19,7 +19,7 @@ All the plugins are fully debugged. List some plugins in Admin:
 This is the product detailed page after merging image handler, GPE, product tag etc.
 ![detailed page](https://github.com/pangqiao/zencart/blob/master/images/productdetail2.jpg)
 
-Please also look at the folder [images](https://github.com/pangqiao/zencart/tree/master/images) to see the difference.
+Please also look at the folder [images](https://github.com/pangqiao/zencart/tree/master/images) to see the all the differences.
 
 ## Code structure
 /var/www: includes the source code for zencart.  
@@ -57,6 +57,7 @@ sudo apt-get install mysql-server-5.6
 
 ## Move the station
 [WampServer](http://www.wampserver.com/) is a Windows web development environment. It allows you to create web applications with Apache2, PHP and a MySQL database. Alongside, PhpMyAdmin allows you to manage easily your database.But you want your web get viewed by others, your should move it to the server and open the port 80. I use ECS of aliyun.  
+
 This is the steps：  
 1. Prepare the environment as before, linux, apach2, PHP, etc.  
 2. Install the same zencart software V1.5.1. with the same username and password as WampServer. 
@@ -72,7 +73,7 @@ This is the steps：
 ```
 define('ADMIN_PASSWORD_EXPIRES_INTERVAL', strtotime('- 90 day'));
 ```
-or change the file admin/login.php, $message to true. 
+or change the file admin/login.php, $message to true, you can use any password. 
 ```
  if ($message == false) {
 	$_SESSION['admin_id'] = $result->fields['admin_id'];
@@ -82,13 +83,19 @@ or change the file admin/login.php, $message to true.
 	zen_redirect(zen_href_link(FILENAME_DEFAULT, ”, ‘SSL’));
 }
 ```
-2. Enter into phpmyadmin, open database of admin, In SQL mode:
+2. Enter into phpmyadmin, open database of admin and run below code in SQL mode. After reset, the password is admin.
 ```
 DELETE FROM admin WHERE admin_name = 'Admin'; 
 INSERT INTO admin (admin_name, admin_email, admin_pass, admin_profile) 
 VALUES ('Admin', 'admin@localhost', '351683ea4e19efe34874b501fdbf9792:9b', 1);
 ```
-after reset, the pass word is "admin"
 
 ## TODO
- 
+1. SSL, OpenSSL, CURL  
+2. PayPal  
+
+## Reference
+1. https://help.aliyun.com/knowledge_detail/40579.html?spm=5176.2020520129.105.5.25d9fd75bVSNQR
+2. http://www.wampserver.com/
+3. https://docs.zen-cart.com/dev/  
+4. https://www.zen-cart.com/index.php
