@@ -40,3 +40,16 @@ sudo apt-get install mysql-client-core-5.6
 sudo apt-get install mysql-client-5.6
 sudo apt-get install mysql-server-5.6
 ```
+## Configure apache
+1. Add below lines in file /etc/apache2/apache2.conf  
+	AddType application/x-httpd-php .php .htm .html  
+	AddDefaultCharset UTF-8  
+	ServerName 172.17.171.41  #your ip, not 127.0.0.1  
+	DirectoryIndex index.htm index.html index.php  
+2. Change "AllowOverride None" to  =>"AllowOverride All"  
+3. Open port 80.  
+  refer to: https://help.aliyun.com/knowledge_detail/59367.html#ubuntu  
+	netstat -an | grep 80  
+	tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN  
+	tcp        0      0 172.17.171.41:41904     140.205.140.205:80      ESTABLISHED  
+4. Change directory to /var/www/ 
