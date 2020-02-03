@@ -1,7 +1,7 @@
 # zencart
 Zen Cart® truly is the art of e-commerce; free, user-friendly, open source shopping cart software. The ecommerce web site design program is developed by a group of like-minded shop owners, programmers, designers, and consultants that think ecommerce web design could be, and should be, done differently.
 ## The changes in the code
-Zen Cart® provides basic functionality, but the skin and the layout is not good looking, and need some important modules. Such as database backup, source code backup,SEO,image handlesr and so on. I use v1.5.1 is because there are more useful mature plugins. The folder [Plugins](https://github.com/pangqiao/zencart/tree/master/Plugins) contains the import plugins in the change, including:
+Zen Cart® provides basic functionality, but the skin and the layout is not good looking, and need some important modules. Such as database backup, source code backup,SEO,image handlesr and so on. I use v1.5.1 is because there are more useful mature plugins. The folder [Plugins](https://github.com/pangqiao/zencart/tree/master/Plugins) contains the import plugins in the changes, including:
 ```
 ultimate_seo_urls_212  
 Simple_Google_Analytics_6  
@@ -27,7 +27,7 @@ Please also look at the folder [images](https://github.com/pangqiao/zencart/tree
 /db.sql: the database backup.  
 
 ## Server requirements
-ubuntu14.04 + apache2 + php+mysql + phalcon
+ubuntu14.04 + apache2 + php+mysql
 ```
 sudo apt-get update
 sudo apt-get install apache2
@@ -58,7 +58,7 @@ sudo apt-get install mysql-server-5.6
 ## Move the station
 [WampServer](http://www.wampserver.com/) is a Windows web development environment. It allows you to create web applications with Apache2, PHP and a MySQL database. Alongside, PhpMyAdmin allows you to manage easily your database.But you want your web get viewed by others, your should move it to the server and open the port 80. I use ECS of aliyun.  
 
-This is the steps：  
+This is the steps:  
 1. Prepare the environment as before, linux, apach2, PHP, etc.  
 2. Install the same zencart software V1.5.1. with the same username and password as WampServer. 
 3. Backup /includes/configure.php and /admin/includes/configure.php on the server.
