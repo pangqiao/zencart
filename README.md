@@ -66,7 +66,8 @@ This is the steps:
 5. Restore /includes/configure.php and /admin/includes/configure.php on the server.
 6. Log on the phpMyAdmin and clean the database, use new datebase [db.sql](https://github.com/pangqiao/zencart/tree/master/db.sql)
 7. If you got error like 404, please check /var/www/.htaccess.
-8. Set the configure.php as read only.
+8. Open apache rewrite.
+9. Set the configure.php as read only.
 
 ## The password of Admin
 1. change the file admin/login.php
