@@ -70,7 +70,7 @@ This is the steps:
 9. Set the configure.php as read only.
 
 ## The password of Admin
-1. change the file admin/login.php
+1. Change the file admin/login.php
 ```
 define('ADMIN_PASSWORD_EXPIRES_INTERVAL', strtotime('- 90 day'));
 ```
