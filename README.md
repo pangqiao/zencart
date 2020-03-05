@@ -13,7 +13,7 @@ Reset-Customer-Password
 sitemapXML(v1.3.8-v1.5.1)
 zen-cart-vChinese-simplified-utf8
 ```
-All the plugins are fully debugged. List some plugins in Admin:
+All the plugins are fully merged and debugged. List some plugins in Admin:
 ![admin](https://github.com/pangqiao/zencart/blob/master/images/Admin.jpg)
 
 This is the product detailed page after merging image handler, GPE, product tag etc.
