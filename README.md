@@ -94,6 +94,8 @@ VALUES ('Admin', 'admin@localhost', '351683ea4e19efe34874b501fdbf9792:9b', 1);
 ## TODO
 1. SSL, OpenSSL, CURL  
 2. PayPal  
+3. Test "west Union"
+4. Find a way to clean "sql log"
 
 ## Reference
 1. https://help.aliyun.com/knowledge_detail/40579.html?spm=5176.2020520129.105.5.25d9fd75bVSNQR
