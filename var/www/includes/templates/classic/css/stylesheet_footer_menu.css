@@ -1,0 +1,106 @@
+#footer {
+        font-family: verdana, arial, helvetica, sans-serif;
+	clear:both;
+	
+	}
+#navSuppWrapper {
+        color: #000000;
+        padding: 10px;
+		text-align: left;
+        width: 956px; 
+        height: 140px; 
+        background: #FFFFFF;  /*The color of footer menu background*/
+		margin:0 auto; /*added by QiaoWei, the gap between the footer menu and copyright*/
+        padding-left: 39px;
+		font-weight: bold;
+		color: #000000;
+		font-family: Verdana;
+		border-top: 1px solid #FF6500; 
+		border-bottom: 1px solid #FF6500; 
+	}	
+#navSuppWrapper dl {margin: 0 0 3px 0;padding:0;clear:both;height:79px;width:100%;}/*Adjust the height and width of the menu*/
+#navSuppWrapper dt {margin-bottom:5px;}
+#navSuppWrapper dd {margin:0;padding:0;float:left;width:19.8%;}/*Column width of the menu - currently set for 4 columns*/
+#navSuppWrapper ul {margin:0;padding:0;list-style: none;}
+#navSuppWrapper li {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        background-image: url(../images/foot-list.png);
+        background-repeat: no-repeat;
+        background-position: 0 0em;
+        }
+#navSuppWrapper li a:link {letter-spacing:.1em;color:#000000;margin:0;padding-left:1em;padding-bottom:.3em;font-size:1em;display:block;font-weight:normal;}
+#navSuppWrapper li a:visited {letter-spacing:.1em;color:#000000;margin:0;padding-left:1em;padding-bottom:.3em;display:block;font-weight:normal;}
+#navSuppWrapper li a:hover {letter-spacing:.1em;color:#FF6500;margin:0;padding-left:1em;padding-bottom:.3em;display:block;font-weight:normal;}
+#navSuppWrapper li a:active {letter-spacing:.1em;color: #FF6500;margin:0;padding-left:1em;padding-bottom:.3em;display:block;font-weight:normal;}
+.menuTitle {
+      margin:0;
+      padding-bottom:10px;
+      text-align:left;
+      font-size:1.1em;
+      font-weight:normal;
+      
+      background-image: url(../images/);
+      }
+
+.first, .second, .third {}
+#siteinfoLegal {
+   margin:0 auto;
+	padding: .5em 0 0;
+	font-size: 0.9em;
+	text-align:center;
+	width:100%;
+	line-height:normal;
+	clear:both;
+}
+#siteinfoLegal a {padding: 0 0.5em 0 0.5em;color: #000;font-weight:bold;white-space: nowrap; }
+#siteinfoLegal a:hover {color: #000;background: #EAC27C;}
+tophead {font-size: 13px;font-weight:normal;color:#000000;font-weight:bold;}
+#footer-social {margin:0;padding:0;float:left;width:19.8%;}
+
+#footer-social li.fbook {padding-left: 15px; background-image: url(../images/small_facebook.png);}
+#footer-social li.twitter {padding-left: 15px; background-image: url(../images/small_twitter.png);}
+#footer-social li.google {padding-left: 15px; background-image: url(../images/small_google.png);}
+#footer-social li.pinterest {padding-left: 15px; background-image: url(../images/small_pinterest.png);}
+#footer-social li.youtube {padding-left: 15px; background-image: url(../images/small_youtube.png);}
+
+
+.twitter li {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        background-image: url(../images/foot-list.png);
+        background-repeat: no-repeat;
+        background-position: 0 0em;
+        }
+
+.google li {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        background-image: url(../images/foot-list.png);
+        background-repeat: no-repeat;
+        background-position: 0 0em;
+        }
+
+.pinterest li {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        background-image: url(../images/foot-list.png);
+        background-repeat: no-repeat;
+        background-position: 0 0em;
+        }
+
+.youtube li {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        background-image: url(../images/foot-list.png);
+        background-repeat: no-repeat;
+        background-position: 0 0em;
+        }
+
+.blog li {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        background-image: url(../images/foot-list.png);
+        background-repeat: no-repeat;
+        background-position: 0 0em;
+        }

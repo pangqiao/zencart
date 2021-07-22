@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Reviews &mdash; Updated, v1.1.0</title>
+
+<style type="text/css">
+<!--
+a, a:active, a:visited {
+  color: #006666;
+  text-decoration: none
+}
+a:hover {
+    color:#00CC99;
+    text-decoration: underline;
+}
+BODY, P, H1, H2, H3, H4, H5, H6, LI, TD, DD, DT {
+  font-family: Verdana, AvantGarde, Tahoma, Arial, sans-serif;
+  font-size: 10pt;
+  color: black;
+  padding: 0px;
+  margin: 20px;
+}
+H1, H2, H3, H4 {
+  font-weight: bold
+}
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 16px;
+  border-top: 1px solid #404040;
+}
+code {
+  padding-left: 25px;
+}
+ol li {
+  margin-left: 0;
+}
+.corefile {
+  color: red;
+}
+.removed {
+  text-decoration: line-through;
+}
+ol li, ul li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+ul li ul {
+  padding-left: 0;
+}
+-->
+</style>
+</head>
+
+<body>
+<a name="top" id="top"></a>
+<h1>Reviews &mdash; Updated</h1>
+<h3>Version 1.1.0 released by lat9</h3>
+<p>Current Support Thread at Zen Cart Forums: <a href="http://www.zen-cart.com/showthread.php?197992-Reviews-Updated-Support-Thread" target="_blank">http://www.zen-cart.com/showthread.php?197992-Reviews-Updated-Support-Thread</a></p>
+
+<h2>Version History:</h2>
+<p>This plugin is based on <em>Reviews by Guests</em>, released on April 25, 2009 by Tervarent (code development by Perfectino: www.perfectino.com, www.perfectino.fr).</p>
+<ul>
+<li>v1.0.0, 2012-07-08, Initial release.</li>
+<li>v1.1.0, 2012-09-24, Merged with Zen Cart&reg; v1.5.1 to include the CSS anti-spam feature.</li>
+</ul>
+<h2>What it does</h2>
+<p>This plugin provides updates to the standard Zen Cart processing of reviews for your products:</p>
+<ul>
+  <li>Reviews can be written by guests, controlled by an admin configuration value.</li>
+  <li>For customer privacy, reviews written by logged-in customers include only their first name and the first letter of their last name (e.g. John Smith becomes John S.).</li>
+  <li>Upon successful review submission, a message is displayed to the customer indicating that their review has been received.</li>
+  <li>If the customer is required to sign in (or register) prior to writing a review, a message indicating as such is displayed on redirect to the login page.</li>
+</ul>
+<p>These standard zen-cart database configuration values are used by this plugin:</p>
+<ul>
+  <li>Configuration-&gt;Minimum Values-&gt;Product Review Text</li>
+  <li>Configuration-&gt;Product Info-&gt;Product Reviews Require Approval</li>
+  <li>Configuration-&gt;E-mail Options-&gt;Send Notice of Pending Reviews Emails To - Status</li>
+  <li>Configuration-&gt;E-mail Options-&gt;Send Notice of Pending Reviews Emails To</li>
+</ul>
+<p>These database configuration values are added by this plugin:</p>
+<ul>
+  <li>Configuration-&gt;Minimum Values->&gt;Product Review Write - Guest Reviewer Name (default: <em>5</em>)</li>
+  <li>Configuration-&gt;Product Info-&gt;Enable product reviews by guests? (default: <em>1/true</em>)</li>
+</ul>
+
+<h2>Installation</h2>
+<p>There are <span class="corefile">core-file overwrites</span> in this plugin; you should <strong>always</strong> backup your cart&rsquo;s database and files prior to making any changes.</p>
+<ol>
+<li>Go to your admin's Tools-&gt;Install SQL Patches; from there you can either upload the reviews_updated_install.sql file or copy and paste the contents of the file.</li>
+<li>Make a backup copy of the <span class="corefile">overwritten core files</span>, then copy the plugin's files to your cart, after renaming the &quot;YOUR_TEMPLATE&quot; folders to match your custom template's name:
+<ol>
+<li>/includes/languages/english/YOUR_TEMPLATE/product_reviews_write.php</li>
+<li class="corefile">/includes/modules/pages/product_reviews_write/header_php.php</li>
+<li class="corefile">/includes/modules/pages/product_reviews_write/jscript_main.php</li>
+<li>/includes/templates/YOUR_TEMPLATE/templates/tpl_product_reviews_write_default.php</li>
+</ol></li>
+</ol>
+
+<h2>Un-install</h2>
+<p>Run the <strong>reviews_updated_uninstall.sql</strong> to remove the database entries, then replace the files you previously copied with their initial contents.   The contents of the SQL file <strong>assume</strong> that the DB_PREFIX value in your configure.php files is set to blank ('').  If that's not the case, you'll need to edit the .sql file to add your database prefix to the <em>configuration</em> table's name.  For example, if your DB_PREFIX value is 'zen_', then you would add zen_ to the name of the configuration table (i.e. zen_configuration) before running the SQL script.</p></body>
+</html>

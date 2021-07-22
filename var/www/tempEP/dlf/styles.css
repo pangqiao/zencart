@@ -1,0 +1,181 @@
+
+#dlf_container {
+	width: 700px;
+	margin-left:auto;
+	margin-right:auto;
+	border: 1px solid #CCCCCC;
+	padding: 9px;
+	background-color:#FFFFFF;
+	
+}
+
+#dlf_container #breadcrumbs {
+	color: #6699FF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:small;
+	margin: 0 0 8px 8px;
+}
+
+#dlf_container #breadcrumbs a, #dlf_container #breadcrumbs a:visited, #dlf_container #breadcrumbs a:link, #dlf_container #breadcrumbs a:active {
+	color: #6699FF;
+	text-decoration:none;
+}
+
+#dlf_container #breadcrumbs a:hover {
+	text-decoration:underline;
+}
+
+#dlf_container #listingcontainer {
+	background-image:url(bg.gif);
+	padding: 10px;
+	background-color:#E0DEDE;
+}
+
+#dlf_container #listingheader {
+	color: #476BB3;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	text-align:right;
+}
+
+#dlf_container #listingheader a, #dlf_container #listingheader a:active, #dlf_container #listingheader a:visited, #dlf_container #listingheader a:link {
+	text-decoration: none;
+	color: #476BB3;
+}
+
+#dlf_container #listingheader a:hover {
+	text-decoration: underline;
+	color: #476BB3;
+}
+
+
+#dlf_container #headerfile {
+	text-align:left;
+	float: left;
+	width: 320px; 
+}
+
+#dlf_container #headersize {
+	text-align:right;
+	width: 75px;
+	float: left;
+}
+
+#dlf_container #listing {
+	border: 1px solid #A7C5FF;
+}
+
+#dlf_container #listing a {
+	display:inline-block;
+	position:relative;
+	padding: 2px 5px 2px 5px;
+	font-size:small;
+	color: #6285CA;
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	width:600px;
+	text-align:right;
+	line-height:2em;
+	
+}
+
+#dlf_container #listing a:hover {
+	background-color:#DBE6FE;
+}
+
+#dlf_container #listing a img {
+	float:left;
+	margin-right: 4px;
+}
+
+
+
+#dlf_container #listing a strong {
+	width: 250px;
+	float:left;
+	cursor:hand;
+	cursor:pointer;
+	text-align:left;
+}
+
+#dlf_container #listing a em {
+	float: left;
+	width: 75px;
+	text-align:right;
+	cursor:hand;
+	cursor:pointer;
+}
+
+#dlf_container #listing a span {
+	position: absolute;
+	margin-left: -151px;
+	margin-top: -2px;
+}
+
+#dlf_container #listing a span img {
+	width: 150px;
+	background-color:#CCCCCC;
+	visibility: hidden;	
+}
+
+#dlf_container #listing a:hover span img {
+	border: 1px solid #666666;
+	visibility: visible;
+}
+
+#dlf_container #upload {
+	border: 1px solid #A7C5FF;
+	display:block;
+	margin-top: 10px;
+	font-size:small;
+	color: #6285CA;
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	width:668px;
+	background-color: #E9F0FF;
+}
+
+#dlf_container #uploadtitle {
+	background-color: #DBE6FE;
+	padding: 2px 5px 2px 5px;
+	border-bottom: 1px solid #A7C5FF;
+	
+}
+
+#dlf_container #uploadcontent {
+	padding: 2px 5px 2px 5px;
+}
+
+
+#dlf_container #copy {
+	width: 700px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size:x-small;
+	color: #666666;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#dlf_container #copy a {
+	text-decoration: underline;
+	color: #666666;
+}
+
+#dlf_container .b {
+	background-color: #E9F0FF;
+	
+}
+
+#dlf_container .w {
+	background-color:#FFFFFF;
+}
+
+#dlf_container .mod {
+	float:right;
+}
+
+#dlf_container .size {
+	float:right;
+}

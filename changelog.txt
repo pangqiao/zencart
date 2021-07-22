@@ -1,0 +1,210 @@
+ 20150726
+	安装中文包
+	安装image handler4
+	备份backup zencart
+ 20150801
+	remove about us page
+	install sitemapXML
+	install wishlist!
+ 20150803
+	VAT
+	western UNION
+	ultimate_seo_urls_212 
+ 20150804
+	edit-invoices-packingslips
+ 20150805
+	css3_buttons-1.1.0
+	IntegratedCOWOA_2.4         
+ 20150806	
+	all_invoices-2.1.0
+	Zen-lightbox				
+ 20150807
+	editor orders
+ 20150808
+	ot_loyalty_discount. 
+	product_listing_sorter_2.0
+	Simple_Google_Analytics_1-2-6
+	；这一部分会导致在安装GPE模块后，详情页刷新会出现小黑点
+	#### PART A: ####
+	At the bottom of /includes/templates/[your_template]/common/tpl_main_page.php
+	Copy and paste the following lines of code (found below) just before the </body> tag:
+	
+	<?php
+		if (GOOGLE_ANALYTICS_TRACKING_TYPE == "Asynchronous") {
+			// Do nothing
+		} else {
+			require(DIR_WS_TEMPLATE . 'google_analytics/google_analytics.php');
+		}
+	?>
+	
+	已经修改，在版本 20160420 &  20160328
+	D:\wamp\www\includes\templates\classic\templates\tpl_modules_main_product_image.php
+	<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 704px; left: 0px;">
+ 20150809
+	Recently viewed items
+	Dynamic Filter v1.2
+	Review updates
+ 201508012
+	Bestsellers Scrolling Images
+	Instant search(like google)
+ 201508013
+	admin_new_orders_1
+ 201508014
+	stats_sales_report
+	Reset-Customer-Password
+ 201508015
+	Flexible_Centerbox_Module_v1.1
+	AdditionalImagesHover1.5
+ 201508016
+	categorypricebulkupdate
+	FEDex
+ 201508017
+	easypopulate; 批量上传
+	Cross sell；交叉销售；
+ 201508020
+	delete: stats_sales_report
+	reviews_reply_v1.1
+	search_log_2
+	Email Archive Manager
+ 201508021
+	how_did_you_hear_about_us_v150
+	FAQ_Manager_2.3
+	google_merchant_center
+	quick_quantity_update_1.1a
+ 201508022	
+	sales_report_graphs_v1.05 直接拷贝安装
+	orders_exporter_1.6直接拷贝安装
+ 201508023	
+	解决中文后台鼠标移位问题
+	Advanced_Search_Plus_2.02
+	confirm-email-double-entry
+	drop2
+ 201508024
+	monthly_sales_and_tax.10
+	delete drop2
+	install blackcssdrop
+	remember me.
+	recover_cart_sales
+ 201508025
+	remove blackcssdrop
+	CSS Horizontal Drop Down Menu ;最上面那一排
+	修改wishlist的显示条件
+ 201508026	
+	ip_blocker
+	 Minimum Order
+ 201508028							
+    remove zen-lightbox
+ 201508029							
+	remove AdditionalImagesHover1.5
+	www\includes\templates\template_default\templates\tpl_product_info_display.php      
+ 201508031
+	Zen Cart 商品页图片展示增强(GPE) 模块		灯箱的效果是GPE模块引入的。虽然zen-lightbox也有。但是给remove掉了。				
+ 20150903
+	ckeditor-452-for-zencart;上线调试
+	fix one bug of invoice;
+	Product_Images_on_Invoice_Email_etc
+ 20150918
+	首页slides_这个效果好！刷新有点慢！
+	remove CSS Horizontal Drop Down Menu !
+	pure_css_mega_menu
+ 20150920
+	most reviewed.
+	css-flyout-categories
+ 20150921
+	remove Ultimate Fade-In Slideshow ；这个没什么效果，误装到 20150921
+ 20150925
+	remove dynamic filter ;和zencart产品属性筛选功能重复，但是明显不如zencart产品属性筛选好，所以删除；
+ 20150929
+	zencart产品属性筛选
+	column_layout_grid_2_3_1; 横排和竖排
+	24_version1.3a   ；每页显示多少产品
+ 20151001	
+	remove css-flyout-categories，透不过图像！换成下面那个
+	CSS Flyout Menu 1.3.9
+ 20151002	
+	修复zencart产品属性筛选不能显示的问题
+ 20151003
+	delete 首页slides_这个效果好！刷新有点慢！
+	试图安装新的，但是发现图片重叠，那么以前的插件也是安装的问题，和插件本身无关。还得找到重新安装一遍， 好像不止是一个(多个)插件的问题。
+ 20151004
+	 Banner图片轮换_速度快简单但是没有hover
+ 20151024
+	-remove VAT&bettertogethter
+	解决Simple_Google_Analytics导致再GPE安装后详情页刷新有小黑点的问题。
+ 20151107
+	排查一些可能安装错误的问题，去除template_default目录重复文件
+	修改一个reviews_reply_v1.1的bug，“少一个逗号，导致后台浏览review结果出错，原plugin已经修改
+ 20151114	
+	homepage_layout_with_hover_effects style 6
+	footer of azienda1.5.zip
+ 20151124
+	header of azienda1.5.zip						----------------------------------------
+ 20151125	
+	product tag
+ 20151206
+	安装back to top
+				D:\wamp\www\includes\templates\classic\common\tpl_footer.php
+				这个文件中有一句会导致GPE的图片有小黑点，而且下面的小图数量不能选择：
+				删掉就可以，而且不影响功能
+				<script type="text/javascript" src="includes/templates/classic/jscript/jquery.js"></script>
+				修改file：tpl_modules_main_product_image.php
+				<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 704px; left: 0px;">
+				note：以上修改在 20160420中完成！！！！！
+    top menu  of LiteRedTemplate_ZCart				-------------------------------------------------------------
+ 20151212
+	header定稿
+ 20151215
+	主界面定稿， 但是小图标和标题的显示没有改
+ 20151230
+	;according to Yorkshire clean
+	修改new,featured,special的前台显示,还有best seller滚动长度的额大小及：scroll to alternate。
+ 20160210 
+    new,featured,special的前台显示等修改完毕！
+ 20160328
+	分类显示子页面完成
+ 20160420	
+	后面修改详情页完成tab添加和修正
+	即添加：Tabbed Products Pro v1.10
+	We also recommend还没有调整好！
+	这个版本有//localhost刷新不完全的问题； 但是后来想查的时候没有了。如果以后复现，从这一版开始查
+ 20160525
+    GPE调整完毕。解决右箭头双击会选中旁边文本的问题；
+ 20160623
+	商品详情页属性归位，并调整成列表形式；
+	增加wholesale price；
+	去掉GPE几个多余的文件；
+ 20160626
+    去掉lightbox；个人觉得有点多余，而且有bug
+	去掉GPE底下小图标的边框；图像的宽度从255调整到340；底下小图标相应增大,去除超级链接。
+	详情页tab调整的好看了一些 
+ 20160905
+	1.移动add to cart和数量到属性框内 副本1
+	2.价格改成下拉列表, 并调整add to cart 的位置 副本2
+	3.详情页布局完成；
+ 20161009
+	更改write review 界面detailinfo的图标。
+	修改GPE，小图超级链接；去掉review界面大图超级链接；
+	best seller 错位的问题；该问题已经修复,主要原因是image目录下没有显示的图像，图像的container比较大。文字被挤到右边了。
+	wishlist调整完成；
+ 20171105
+    1.修正tpl_modules_attributes.php 文字和图形错位的问题
+	LABEL, h4.optionName.back {
+	line-height: 1.5em;
+	padding: 0.2em;
+	width:100px;
+	float:left;  //主要是改这一行
+	2.更换add to list图标
+	3.更换购物车刷新图标
+	4. You may want to add some instructions for using the shopping cart here. (defined in includes/languages/english/shopping_cart.php)
+	5.因为是免运费，所以去掉购物车运费计算
+	   /* if (SHOW_SHIPPING_ESTIMATOR_BUTTON == '1') {**/购物车显示运费后台应该可以关掉!
+	6.your shopping cart is empty后面加了一个回车换行。
+	7.CKeditor配成用google的库了。
+47.95.215.83_02272018-2152
+	使能了CKeditor，用的sina；但是有checkout页面不能刷新问题sitemap模块写文件有权限问题。
+	db_sipangziq-20180403134605.sql这个数据库是从 20171105倒出来的！权限问题解决
+
+	
+	
+	
+	

@@ -1,0 +1,21 @@
+#discount_info{
+	border:1px solid #ddd;
+	border-width:0 0 1px 1px;
+	padding:0;
+	margin:0;
+	color:#666;
+	border-collapse:collapse;
+}
+#discount_info td,#discount_info th{
+	border:1px solid #ddd;
+	border-width:1px 1px 0 0;
+	padding:3px;
+	margin:0;
+	width:100px;
+	text-align:center;
+	height: 22px;
+	}
+#discount_info th{	
+	 background: #ECECEC;
+	 }
+	

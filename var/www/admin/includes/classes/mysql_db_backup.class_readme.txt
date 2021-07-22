@@ -1,0 +1,217 @@
+MySQL DB backup class, version 1.0.1
+written by Luis Arturo Aguilar Mendoza <minibikec@prodigy.net.mx>
+Released under GNU Public license
+
+Based on MySQL database backup class Version 1.0.0, written by Vagharshak Tozalakyan <vagh@armdex.com>
+
+//----------------------- WHAT'S NEW? -----------------------
+
+- The class now can make backups from big databases (+16M in SQL code) when 
+it creates a backup file or saves the backup file in users computer.
+- Added the task MSX_APPEND
+
+//----------------------- HOW TO USE -----------------------
+
+1. Create the instance of MySQL_Export class.
+2. Define necessary properties.
+3. Call Execute() method to create backup.
+
+require_once 'mysql_export.class.php';
+$backup_obj = new MySQL_DB_Backup();
+$backup_obj->server = 'localhost';
+$backup_obj->username = 'username';
+$backup_obj->password = 'password';
+$backup_obj->database = 'dbname';
+$backup_obj->tables = array();
+$backup_obj->create_tables = true;
+$backup_obj->drop_tables = true;
+$backup_obj->struct_only = false;
+$backup_obj->locks = true;
+$backup_obj->comments = true;
+$backup_obj->fname_format = 'd_m_y__H_i_s';
+$backup_obj->null_values = array( '0000-00-00', '00:00:00', '0000-00-00 00:00:00');
+if (!$backup_obj->Execute(MSX_DOWNLOAD, '', true))
+{
+  die($backup_obj->error);
+}
+
+
+//----------------------- PUBLIC PROPERTIES -----------------------
+
+var $server = 'localhost';
+The name of MySQL server.
+
+var $port = 3306;
+The port of MySQl server.
+
+var $username = 'root';
+Database username.
+
+var $password = '';
+Database password.
+
+var $database = '';
+Name of the database.
+
+var $link_id = -1;
+MySQL link identifier of the current connection. You can set this if you
+want to connect the MySQL server by your own.
+
+var $connected = false;
+Set true if the connection is already established before calling Execute().
+
+var $tables = array();
+Tables you want to backup. All tables in the database will be backed up if
+this array is empty.
+
+var $create_tables = true;
+Backup the structure of tables if true.
+
+var $drop_tables = true;
+Add DROP TABLE IF EXISTS queries before CREATE TABLE in backup file.
+
+var $struct_only = false;
+Only structure of the tables will be backed up if true.
+
+var $locks = true;
+Add LOCK TABLES and UNLOCK TABLES queries before and after each INSERT queries
+block.
+
+var $comments = true;
+Include comments in backup file if true.
+
+var $backup_dir = '';
+Directory on the server where the backup file will be placed. Used if task
+parameter equals to MSX_SAVE or MSX_DOWNLOAD in Execute() method.
+
+var $fname_format = 'd_m_y__H_i_s';
+Default file name format.
+
+var $error = '';
+Error message.
+
+var $null_values = array( '0000-00-00', '00:00:00', '0000-00-00 00:00:00');
+Values which must be interpreted as NULL
+
+
+// ----------------------- PUBLIC METHODS -----------------------
+
+function Execute($task = MSX_STRING, $fname = '', $compress = false)
+$task - operation to perform: MSX_STRING - return SQL commands as a string;
+  MSX_SAVE - create the backup file on the server; MSX_DOWNLOAD - save backup
+  file in the user's computer; MSX_APPEND - append backup in the file on the
+  server.
+$fname - optional name of backup file.
+$compress - use GZip compression?
+
+// ----------------------- EXAMPLE PHP FILE -----------------------
+
+<?
+	/*
+		|-----------------------------------------------------------------------|
+		|   Example MySQL DB Backup 1.0.1 File                                  |
+		|                     	                                                |
+		|   Written by: Luis Arturo Aguilar Mendoza <minibikec@prodigy.net.mx>  |
+		|   Released under GNU Public license.                                  |
+		|                                                                       |
+		|   Only use with MySQL DB Bakup class.                                 |
+		|-----------------------------------------------------------------------|
+	*/
+	
+	require_once 'mysql_db_backup.class.php';
+	$backup_obj = new MySQL_DB_Backup();
+	
+	//----------------------- EDIT - REQUIRED SETUP VARIABLES -----------------------
+			
+			$backup_obj->server = 'localhost';
+			$backup_obj->port = 3306;
+			$backup_obj->username = 'root';
+			$backup_obj->password = '';
+			$backup_obj->database = '';
+			
+			//Tables you wish to backup. All tables in the database will be backed up if this array is null.
+			$backup_obj->tables = array('almacenes');
+
+	//------------------------ END - REQUIRED SETUP VARIABLES -----------------------
+	
+	//-------------------- OPTIONAL PREFERENCE VARIABLES ---------------------
+			
+			//Add DROP TABLE IF EXISTS queries before CREATE TABLE in backup file.
+			$backup_obj->drop_tables = true;
+			
+			//No table structure will be backed up if false
+			$backup_obj->create_tables = true;
+
+			//Only structure of the tables will be backed up if true.
+			$backup_obj->struct_only = false;
+
+			//Add LOCK TABLES before data backup and UNLOCK TABLES after
+			$backup_obj->locks = true;
+
+			//Include comments in backup file if true.
+			$backup_obj->comments = true;
+			
+			//Directory on the server where the backup file will be placed. Used only if task parameter equals MSX_SAVE.
+			$backup_obj->backup_dir = './';
+			
+			//Default file name format.
+			$backup_obj->fname_format = 'm_d_Y';
+			
+			//Values you want to be intrerpreted as NULL
+			$backup_obj->null_values = array( '0000-00-00', '00:00:00', '0000-00-00 00:00:00');
+	//--------------------- END - OPTIONAL PREFERENCE VARIABLES ---------------------
+			
+	//---------------------- EDIT - REQUIRED EXECUTE VARIABLES ----------------------		
+				
+			/*
+				Task: 
+					MSX_STRING - Return SQL commands as a single output string.
+					MSX_SAVE - Create the backup file on the server.
+					MSX_DOWNLOAD - Download backup file to the user's computer.
+					MSX_APPEND - Append the backup to the file on the server.
+					
+			*/
+			$task = MSX_DOWNLOAD;
+			
+			//Optional name of backup file if using 'MSX_APPEND', 'MSX_SAVE' or 'MSX_DOWNLOAD'. If nothing is passed, the default file name format will be used.
+			$filename = '';
+			
+			//Use GZip compression if using 'MSX_APPEND', 'MSX_SAVE' or 'MSX_DOWNLOAD'?
+			$use_gzip = true;
+
+	//--------------------- END - REQUIRED EXECUTE VARIABLES ----------------------
+	
+	//-------------------- NO NEED TO ANYTHING BELOW THIS LINE -------------------- 
+	
+	$result_bk = $backup_obj->Execute($task, $filename, $use_gzip);
+	if (!$result_bk)
+	{
+		 $output = $backup_obj->error;
+	}
+	else
+	{
+		$output = 'Operation Completed Successfully At: <b>' . date('g:i:s A') . '</b><i> ( Local Server Time )</i>';
+		if ($task == MSX_STRING)
+		{
+			$output.= '\n' . $result_bk;
+		}
+	}
+	if ($task != MSX_DOWNLOAD)
+	{
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MySQL Backup</title>
+</head>
+<body>
+<?
+	echo $output;
+?>
+</body>
+</html>
+<?
+	}
+?>
+
