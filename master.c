@@ -1,2 +1,3 @@
+master:conflict
 master:begin 
 
