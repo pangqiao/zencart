@@ -1,3 +1,4 @@
+idle 3
 dev2:conflict
 master:conflict
 idle 2
